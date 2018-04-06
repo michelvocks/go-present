@@ -1,0 +1,206 @@
+Golang
+Introduction
+Tags: go, intro
+
+Michel Vocks
+Platform Engineer, DB Schenker
+michel.vocks@dbschenker.com
+https://github.com/michelvocks
+https://github.com/michelvocks/go-present
+@michelvocks
+
+* Outline
+
+1. What is Go?
+2. Why should you learn Go?
+3. Go compared to Java
+4. Learning the Go basics
+5. Writing our first simple web service
+
+* What is Go?
+
+"Go is an open source programming language that makes it easy to build simple, reliable, and efficient software."
+
+.link http://golang.org
+
+.image img/gopher.jpg
+
+* History
+
+Design began in late 2007.
+
+- Robert Griesemer, Rob Pike, and Ken Thompson.
+- Ian Lance Taylor and Russ Cox.
+
+Open source since 2009 with a very active Community.
+
+Language stable as of Go 1, early 2012.
+
+* Why should you learn Go?
+
+_"Go_will_be_the_server_language_of_the_future."_ -- Tobias Lütke, Shopify
+
+* Apps written in Go
+
+- Docker
+- Kubernetes
+- Etcd
+- Terraform
+- Vault
+- Packer
+- ...
+
+* Companies using Go in production
+
+- Google
+- Facebook
+- Twitter
+- Apple
+- Netflix
+- Dropbox
+- Twitch
+- Mozilla
+- Github
+- UBER
+- New York Times
+- ...
+
+* Go is an answer to problems of scale at Google.
+
+.image img/datacenter.jpg 500 _
+
+* System Scale
+
+- designed to scale to 10⁶⁺ machines
+- everyday jobs run on 1000s of machines
+- jobs coordinate, interact with others in the system
+- lots going on at once
+
+Solution: great support for concurrency
+
+.image img/gophercomplex6.jpg
+
+* A Second Problem: Engineering Scale
+
+In 2011:
+
+- 5000+ developers across 40+ offices
+- 20+ changes per minute
+- 50% of code base changes every month
+- 50 million test cases executed per day
+- single code tree
+
+Solution: design the language for large code bases
+
+* Go compared to Java
+
+- C family (imperative, braces)
+- Statically typed
+- Garbage collected
+- Memory safe (nil references, runtime bounds checks)
+- Variables are always initialized (zero/nil/false)
+- Methods
+- Interfaces
+- Type assertions (`instanceof`)
+- Reflection
+
+* Go differs from Java in several ways
+
+Fast, efficient for computers:
+
+- Programs compile to machine code.  There's no VM.
+- Control over memory layout, fewer indirections
+
+Fun, fast for humans:
+
+- Simple, concise syntax
+- Statically linked binaries
+- Function values and lexical closures
+- Built-in strings (UTF-8)
+- Built-in generic maps and arrays/slices
+- Built-in concurrency
+
+* Go intentionally leaves out many features
+
+- No classes
+- No inheritance
+- No constructors
+- No `final`
+- No exceptions
+- No annotations
+- No user-defined generics
+
+* Why does Go leave out those features?
+
+Clarity is critical.
+
+When reading code, it should be clear what the program will do.
+
+When writing code, it should be clear how to make the program do what you want.
+
+Sometimes this means writing out a loop instead of invoking an obscure function.
+
+For more background on design:
+
+- [[http://commandcenter.blogspot.com/2012/06/less-is-exponentially-more.html][Less is exponentially more (Pike, 2012)]]
+- [[http://talks.golang.org/2012/splash.article][Go at Google: Language Design in the Service of Software Engineering (Pike, 2012)]]
+
+* Learning the Go basics
+
+.play app/hello.go
+
+* Functions
+
+.play app/func.go
+
+* Variables
+
+.play app/vars.go
+
+* If-Statement
+
+.play app/if.go
+
+* Short-If-Statement
+
+.play app/short-if.go
+
+* Loops
+
+.play app/for.go
+
+* Pointers
+
+.play app/pointers.go
+
+* Structs
+
+.play app/structs.go
+
+* Methods
+
+.play app/methods.go
+
+* Slices
+
+.play app/slices.go
+
+* Range
+
+.play app/range.go
+
+* Closures
+
+.play app/closures.go
+
+* Writing our first simple web service
+
+Write a program that accepts two integer numbers via a http request form values.
+Those numbers should be multiplied by 5 *in* *parallel* and the results are printed out.
+
+* Used sources
+
+.link https://tour.golang.org/list
+.link https://talks.golang.org
+.link https://golang.org
+
