@@ -48,6 +48,7 @@ _"Go_will_be_the_server_language_of_the_future."_ -- Tobias Lütke, Shopify
 - Terraform
 - Vault
 - Packer
+- This presentation :-)
 - ...
 
 * Companies using Go in production
@@ -108,7 +109,7 @@ Solution: design the language for large code bases
 
 Fast, efficient for computers:
 
-- Programs compile to machine code.  There's no VM.
+- Programs compile to machine code.  There's no VM. 
 - Control over memory layout, fewer indirections
 
 Fun, fast for humans:
